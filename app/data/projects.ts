@@ -1,15 +1,6 @@
-// slug: A unique, URL-friendly identifier for the project.
-// group: Can be 'Freelance' or 'Academic' (for now)
-// title: The project's title.
-// category: The context of the project.
-// date: The timeline of the project.
-// link: A live URL for the project if available
-// description_points: An array of key achievements.
-// tags: Keywords for technologies and concepts used.
-
 export type Project = {
 	slug: string
-	group: 'Freelance' | 'Academic'
+	group: 'Freelance' | 'Academic' | 'Personal'
 	title: string
 	category: string
 	date: string
@@ -30,7 +21,7 @@ export const projects: Project[] = [
 		group: 'Freelance',
 		title: 'Playlix Website',
 		category: 'Freelance Project',
-		date: 'May 2025 – Jun 2025',
+		date: 'May 2025 - Jun 2025',
 		link: 'https://playlix.pt/',
 		description_points: [
 			'Designed and developed the official Playlix website using Vue.js, delivering a responsive and fast-loading interface.',
@@ -39,11 +30,56 @@ export const projects: Project[] = [
 		tags: ['Vue.js', 'Web Development', 'UI/UX Design', 'Branding', 'Freelance']
 	},
 	{
+		slug: 'clotho',
+		group: 'Personal',
+		title: 'Clotho',
+		category: 'The Moirai System',
+		date: 'Jan 2026',
+		link: 'https://github.com/0x1eo/clotho',
+		description_points: [
+			'Built an Evidence-as-Code compliance auditing tool that SSH into servers to verify configuration baselines.',
+			'Implements automated drift detection with ISO 27002:2022 control mapping for security compliance.',
+			'Features pluggable collectors for ports, users, files, and processes with customizable YAML baselines.',
+			'Generates LaTeX/PDF reports and machine-readable JSON output for integration with monitoring systems.'
+		],
+		tags: ['Python', 'SSH', 'Compliance', 'ISO 27002', 'Security Auditing', 'LaTeX', 'YAML']
+	},
+	{
+		slug: 'lachesis',
+		group: 'Personal',
+		title: 'Lachesis',
+		category: 'The Moirai System',
+		date: 'Jan 2026',
+		link: 'https://github.com/0x1eo/lachesis',
+		description_points: [
+			'Developed a compliance monitoring dashboard that ingests Clotho audit reports and tracks drift over time.',
+			'Built a Node.js/Express API with MariaDB backend to store and analyze compliance data.',
+			'Created an Angular dashboard displaying entropy scores, stability metrics, and MTBF calculations.',
+			'Implements webhook-based alerts to trigger Atropos remediation when entropy thresholds are exceeded.'
+		],
+		tags: ['Node.js', 'Express.js', 'Angular', 'MariaDB', 'Dashboard', 'Monitoring', 'REST API']
+	},
+	{
+		slug: 'atropos',
+		group: 'Personal',
+		title: 'Atropos',
+		category: 'The Moirai System',
+		date: 'Jan 2026',
+		link: 'https://github.com/0x1eo/atropos',
+		description_points: [
+			'Engineered a Go-based automated remediation service that "cuts" (isolates/resets) compromised nodes.',
+			'Implements a modular Cutter interface with strategies for Docker, SSH, and VirtualBox operations.',
+			'Features secure HMAC-verified webhooks to receive entropy alerts from Lachesis.',
+			'Supports policy-driven responses with configurable entropy thresholds for graduated remediation actions.'
+		],
+		tags: ['Go', 'Webhooks', 'HMAC', 'Docker', 'VirtualBox', 'SSH', 'Automated Remediation']
+	},
+	{
 		slug: 'diet-platform-pro',
 		group: 'Academic',
 		title: 'Diet Platform Pro',
 		category: ' Web Programming',
-		date: '2024 – 2025',
+		date: '2024 - 2025',
 		link: null,
 		description_points: [
 			'Developed a full-stack web platform to connect nutritionists and patients.',
@@ -68,7 +104,7 @@ export const projects: Project[] = [
 		group: 'Academic',
 		title: 'Penetration Testing & Vulnerability Exploitation',
 		category: 'Penetration Testing and Ethical Hacking',
-		date: '2024 – 2025',
+		date: '2024 - 2025',
 		link: null,
 		description_points: [
 			'Conducted network reconnaissance and service enumeration using Nmap in a virtualized lab environment.',
@@ -107,7 +143,7 @@ export const projects: Project[] = [
 		group: 'Academic',
 		title: 'High-Availability Web Cluster',
 		category: 'Critical Systems',
-		date: '2024 – 2025',
+		date: '2024 - 2025',
 		link: 'https://github.com/0x1eo/HAWC',
 		description_points: [
 			'Built a fault-tolerant e-commerce web cluster utilizing NGINX for load balancing, MariaDB Cluster for database replication, and GlusterFS for distributed file storage.',
@@ -137,7 +173,7 @@ export const projects: Project[] = [
 		group: 'Academic',
 		title: 'Football Simulator',
 		category: 'Programming Paradigms',
-		date: '2024 – 2025',
+		date: '2024 - 2025',
 		link: 'https://github.com/0x1eo/FootballSim',
 		description_points: [
 			'Developed a comprehensive football league management and simulation system using Java and Maven.',
@@ -163,7 +199,7 @@ export const projects: Project[] = [
 		group: 'Academic',
 		title: 'Order Management System in C',
 		category: 'Programming Laboratory',
-		date: '2022 – 2023',
+		date: '2022 - 2023',
 		link: 'https://github.com/0x1eo/LP',
 		description_points: [
 			'Developed a command-line (CLI) CRUD application in C for managing customer orders and client data.',

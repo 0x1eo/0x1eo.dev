@@ -1,51 +1,58 @@
 <template>
 	<header
-		class="bg-gray-900/80 backdrop-blur-md text-white sticky top-0 z-50 border-b border-gray-800">
+		class="bg-tron-bg/90 backdrop-blur-md text-white sticky top-0 z-50 border-b border-tron-border">
+		<!-- Glowing Top Edge -->
+		<div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[var(--tron-primary)] to-transparent opacity-60" />
+		
 		<nav class="container mx-auto flex justify-between items-center p-4">
 			<!-- Logo/Brand -->
 			<div class="flex flex-1 justify-start">
-				<NuxtLink to="/" class="group flex items-center space-x-2">
+				<NuxtLink to="/" class="group flex items-center space-x-3">
+					<!-- TRON-style Logo Box -->
 					<div
-						class="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-						<span class="text-white font-bold text-lg">LA</span>
+						class="relative w-10 h-10 bg-gradient-to-br from-[var(--tron-primary)] to-[var(--tron-secondary)] flex items-center justify-center group-hover:shadow-[var(--tron-glow-md)] transition-all duration-300">
+						<!-- Hex corners -->
+						<div class="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-white/50" />
+						<div class="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-white/50" />
+						<span class="text-white font-bold text-lg font-['Orbitron']">LA</span>
 					</div>
 					<span
-						class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-purple-300 transition-all duration-300">
-						Leandro Afonso
+						class="text-2xl font-bold font-['Orbitron'] uppercase tracking-wider tron-gradient-text group-hover:drop-shadow-[0_0_10px_rgba(255,69,0,0.8)] transition-all duration-300">
+						0x1eo
 					</span>
 				</NuxtLink>
 			</div>
 
 			<!-- Desktop Navigation -->
-			<ul class="hidden md:flex space-x-8 text-lg">
+			<ul class="hidden md:flex space-x-8 text-lg font-['Orbitron']">
 				<li>
 					<NuxtLink
 						to="/"
-						class="relative py-2 hover:text-blue-400 transition-colors duration-300 group"
-						:class="{ 'text-blue-400': $route.path === '/' }">
+						class="relative py-2 text-gray-300 hover:text-[var(--tron-primary)] transition-colors duration-300 group uppercase tracking-wide text-sm"
+						:class="{ 'text-[var(--tron-primary)]': $route.path === '/' }">
 						Home
 						<span
-							class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
+							class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--tron-primary)] to-[var(--tron-secondary)] group-hover:w-full transition-all duration-300 shadow-[var(--tron-glow-sm)]" />
 					</NuxtLink>
 				</li>
 				<li>
 					<NuxtLink
 						to="/projects"
-						class="relative py-2 hover:text-blue-400 transition-colors duration-300 group"
-						:class="{ 'text-blue-400': $route.path.startsWith('/projects') }">
+						class="relative py-2 text-gray-300 hover:text-[var(--tron-primary)] transition-colors duration-300 group uppercase tracking-wide text-sm"
+						:class="{ 'text-[var(--tron-primary)]': $route.path.startsWith('/projects') }">
 						Projects
 						<span
-							class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
+							class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--tron-primary)] to-[var(--tron-secondary)] group-hover:w-full transition-all duration-300 shadow-[var(--tron-glow-sm)]" />
 					</NuxtLink>
 				</li>
 				<li>
 					<NuxtLink
 						to="/about"
-						class="relative py-2 hover:text-blue-400 transition-colors duration-300 group"
-						:class="{ 'text-blue-400': $route.path === '/about' }">
+						class="relative py-2 text-gray-300 hover:text-[var(--tron-primary)] transition-colors duration-300 group uppercase tracking-wide text-sm"
+						:class="{ 'text-[var(--tron-primary)]': $route.path === '/about' }">
 						About
 						<span
-							class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
+							class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--tron-primary)] to-[var(--tron-secondary)] group-hover:w-full transition-all duration-300 shadow-[var(--tron-glow-sm)]" />
 					</NuxtLink>
 				</li>
 			</ul>
@@ -54,7 +61,7 @@
 			<div class="hidden md:flex flex-1 justify-end">
 				<a
 					href="mailto:leo@0x1eo.dev"
-					class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+					class="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-[var(--tron-primary)] to-[var(--tron-secondary)] text-white font-semibold font-['Orbitron'] text-sm uppercase tracking-wider hover:shadow-[var(--tron-glow-md)] transform hover:scale-105 transition-all duration-300">
 					<svg
 						class="w-4 h-4 mr-2"
 						fill="none"
@@ -72,7 +79,7 @@
 
 			<!-- Mobile Menu Button -->
 			<button
-				class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300"
+				class="md:hidden p-2 text-gray-300 hover:text-[var(--tron-primary)] transition-colors duration-300"
 				@click="toggleMobileMenu">
 				<svg
 					class="w-6 h-6"
@@ -98,34 +105,34 @@
 		<!-- Mobile Menu -->
 		<div
 			v-if="mobileMenuOpen"
-			class="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800 animate-fade-in">
-			<div class="container mx-auto p-4 space-y-4">
+			class="md:hidden bg-tron-bg/95 backdrop-blur-md border-t border-tron-border animate-fade-in">
+			<div class="container mx-auto p-4 space-y-3 font-['Orbitron']">
 				<NuxtLink
 					to="/"
-					class="block py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors duration-300"
-					:class="{ 'bg-gray-800 text-blue-400': $route.path === '/' }"
+					class="block py-3 px-4 text-gray-300 hover:text-[var(--tron-primary)] hover:bg-[var(--tron-primary)]/10 border border-transparent hover:border-[var(--tron-border)] transition-all duration-300 uppercase tracking-wide text-sm"
+					:class="{ 'bg-[var(--tron-primary)]/10 border-[var(--tron-border)] text-[var(--tron-primary)]': $route.path === '/' }"
 					@click="closeMobileMenu">
 					Home
 				</NuxtLink>
 				<NuxtLink
 					to="/projects"
-					class="block py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors duration-300"
+					class="block py-3 px-4 text-gray-300 hover:text-[var(--tron-primary)] hover:bg-[var(--tron-primary)]/10 border border-transparent hover:border-[var(--tron-border)] transition-all duration-300 uppercase tracking-wide text-sm"
 					:class="{
-						'bg-gray-800 text-blue-400': $route.path.startsWith('/projects')
+						'bg-[var(--tron-primary)]/10 border-[var(--tron-border)] text-[var(--tron-primary)]': $route.path.startsWith('/projects')
 					}"
 					@click="closeMobileMenu">
 					Projects
 				</NuxtLink>
 				<NuxtLink
 					to="/about"
-					class="block py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors duration-300"
-					:class="{ 'bg-gray-800 text-blue-400': $route.path === '/about' }"
+					class="block py-3 px-4 text-gray-300 hover:text-[var(--tron-primary)] hover:bg-[var(--tron-primary)]/10 border border-transparent hover:border-[var(--tron-border)] transition-all duration-300 uppercase tracking-wide text-sm"
+					:class="{ 'bg-[var(--tron-primary)]/10 border-[var(--tron-border)] text-[var(--tron-primary)]': $route.path === '/about' }"
 					@click="closeMobileMenu">
 					About
 				</NuxtLink>
 				<a
 					href="mailto:leo@0x1eo.dev"
-					class="flex items-center justify-center py-3 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+					class="flex items-center justify-center py-3 px-4 bg-gradient-to-r from-[var(--tron-primary)] to-[var(--tron-secondary)] text-white font-semibold uppercase tracking-wide text-sm hover:shadow-[var(--tron-glow-md)] transition-all duration-300">
 					<svg
 						class="w-4 h-4 mr-2"
 						fill="none"
@@ -169,6 +176,18 @@ watch(
 </script>
 
 <style scoped>
+.bg-tron-bg\/90 {
+	background-color: rgba(10, 10, 15, 0.9);
+}
+
+.bg-tron-bg\/95 {
+	background-color: rgba(10, 10, 15, 0.95);
+}
+
+.border-tron-border {
+	border-color: rgba(255, 69, 0, 0.3);
+}
+
 @keyframes fade-in {
 	from {
 		opacity: 0;
