@@ -24,7 +24,7 @@ const { project } = defineProps<Props>()
 			<div class="absolute inset-x-0 h-px bg-[var(--tron-primary)]/50 animate-scan-line" />
 		</div>
 
-		<div class="relative p-8 flex flex-col h-full">
+		<div class="relative p-4 sm:p-6 md:p-8 flex flex-col h-full">
 			<div class="flex items-center justify-between mb-4">
 				<span
 					class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-['Orbitron'] font-medium uppercase tracking-wider transition-all duration-300 border"
@@ -70,7 +70,7 @@ const { project } = defineProps<Props>()
 			</div>
 
 			<h3
-				class="text-xl font-bold font-['Orbitron'] text-white mb-3 group-hover:text-[var(--tron-primary)] group-hover:drop-shadow-[0_0_10px_rgba(255,69,0,0.5)] transition-all duration-300 uppercase tracking-wide h-14 line-clamp-2">
+				class="text-lg sm:text-xl font-bold font-['Orbitron'] text-white mb-3 group-hover:text-[var(--tron-primary)] group-hover:drop-shadow-[0_0_10px_rgba(255,69,0,0.5)] transition-all duration-300 uppercase tracking-wide min-h-0 sm:h-14 line-clamp-2">
 				{{ project.title }}
 			</h3>
 
@@ -178,5 +178,12 @@ const { project } = defineProps<Props>()
 
 .animate-scan-line {
 	animation: scan-line 1.5s ease-in-out infinite;
+}
+
+/* Mobile-specific card styles */
+@media (max-width: 768px) {
+	:deep(.relative.p-8) {
+		padding: 1rem;
+	}
 }
 </style>

@@ -426,4 +426,28 @@ onUnmounted(() => {
 	0% { opacity: 0.6; }
 	100% { opacity: 1; }
 }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+	.grid-pattern {
+		background-size: 30px 30px;
+	}
+	
+	.grid-glow {
+		background-size: 30px 30px;
+		display: none;
+	}
+	
+	.pulse-point {
+		display: none;
+	}
+	
+	.top-glow {
+		opacity: 0.5;
+	}
+	
+	.cycle-canvas {
+		opacity: 0.6;
+	}
+}
 </style>

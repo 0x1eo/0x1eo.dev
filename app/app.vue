@@ -458,4 +458,35 @@ a:focus-visible {
 	opacity: 0;
 	transform: translateY(-20px);
 }
+
+/* Mobile utility classes */
+.mobile-only {
+	display: none;
+}
+
+.desktop-only {
+	display: block;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+	.mobile-only {
+		display: block;
+	}
+	
+	.desktop-only {
+		display: none;
+	}
+	
+	/* Reduce heavy animations on mobile */
+	.animate-tron-pulse,
+	.animate-tron-flicker {
+		animation: none;
+	}
+	
+	/* Smaller text on mobile */
+	.tron-heading {
+		letter-spacing: 0.02em;
+	}
+}
 </style>

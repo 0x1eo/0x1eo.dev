@@ -126,4 +126,14 @@ useHead({
 	animation: fade-in-up 0.8s ease-out forwards;
 	opacity: 0;
 }
+
+/* Mobile hero optimizations */
+@media (max-width: 768px) {
+	/* Hide large glow effects on mobile */
+	.absolute.w-96,
+	.absolute.w-80,
+	.absolute.w-\[600px\] {
+		display: none;
+	}
+}
 </style>
