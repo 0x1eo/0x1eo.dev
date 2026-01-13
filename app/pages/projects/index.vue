@@ -23,26 +23,26 @@ const filteredProjects = computed(() => {
 <template>
   <div class="min-h-screen">
     <div class="container mx-auto px-4 py-12">
-      <div class="text-center mb-16">
+      <div class="text-center mb-8 sm:mb-16">
         <div class="inline-block mb-4">
           <span class="px-4 py-1 border border-[var(--tron-border)] font-['Orbitron'] text-xs text-[var(--tron-primary)] tracking-widest uppercase">
             // Full Database
           </span>
         </div>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-['Orbitron'] uppercase tracking-wider tron-gradient-text mb-6 drop-shadow-[0_0_20px_rgba(255,69,0,0.3)]">
+        <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold font-['Orbitron'] uppercase tracking-wider tron-gradient-text mb-4 sm:mb-6 drop-shadow-[0_0_20px_rgba(255,69,0,0.3)]">
           All Projects
         </h1>
         <div class="w-32 h-0.5 bg-gradient-to-r from-transparent via-[var(--tron-primary)] to-transparent mx-auto mb-6 shadow-[0_0_10px_var(--tron-primary)]" />
-        <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+        <p class="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
           A comprehensive collection of cybersecurity research, systems engineering, and technical projects
         </p>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
         <button
           v-for="group in groups"
           :key="group"
-          class="px-6 py-3 font-['Orbitron'] font-semibold uppercase tracking-wider text-sm transition-all duration-300 transform hover:scale-105"
+          class="px-3 py-2 sm:px-6 sm:py-3 font-['Orbitron'] font-semibold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 transform hover:scale-105"
           :class="selectedGroup === group 
             ? 'bg-gradient-to-r from-[var(--tron-primary)] to-[var(--tron-secondary)] text-white shadow-[var(--tron-glow-md)]' 
             : 'bg-transparent text-gray-400 border border-[var(--tron-border)] hover:border-[var(--tron-primary)] hover:text-[var(--tron-primary)]'"
@@ -55,7 +55,7 @@ const filteredProjects = computed(() => {
         </button>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
         <ProjectCard 
           v-for="(project, index) in filteredProjects" 
           :key="project.slug" 

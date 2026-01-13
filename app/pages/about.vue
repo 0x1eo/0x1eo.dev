@@ -9,29 +9,29 @@ useHead({
 
 <template>
   <div class="min-h-screen">
-    <section class="relative py-20 px-4 overflow-hidden">
+    <section class="relative py-12 sm:py-20 px-4 overflow-hidden">
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--tron-primary)]/20 to-transparent" />
         <div class="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--tron-secondary)]/15 to-transparent" />
       </div>
       
-      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
         <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-[var(--tron-primary)]/10 rounded-full blur-[80px] animate-pulse" />
         <div class="absolute bottom-1/3 left-1/3 w-80 h-80 bg-[var(--tron-secondary)]/10 rounded-full blur-[100px] animate-pulse" style="animation-delay: 2s;" />
       </div>
 
       <div class="relative z-10 max-w-4xl mx-auto">
-        <div class="text-center mb-16">
+        <div class="text-center mb-8 sm:mb-16">
           <div class="inline-block mb-4">
             <span class="px-4 py-1 border border-[var(--tron-border)] font-['Orbitron'] text-xs text-[var(--tron-primary)] tracking-widest uppercase">
               // User Profile
             </span>
           </div>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-['Orbitron'] uppercase tracking-wider tron-gradient-text mb-6 drop-shadow-[0_0_20px_rgba(255,69,0,0.3)]">
+          <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold font-['Orbitron'] uppercase tracking-wider tron-gradient-text mb-4 sm:mb-6 drop-shadow-[0_0_20px_rgba(255,69,0,0.3)]">
             About Me
           </h1>
           <div class="w-32 h-0.5 bg-gradient-to-r from-transparent via-[var(--tron-primary)] to-transparent mx-auto mb-6 shadow-[0_0_10px_var(--tron-primary)]" />
-          <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p class="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
             Passionate about cybersecurity and systems engineering
           </p>
         </div>
@@ -40,7 +40,7 @@ useHead({
 
     <section class="py-12 px-4">
       <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center mb-12 sm:mb-20">
           <div class="relative group">
             <div class="relative overflow-hidden bg-[var(--tron-bg-card)] backdrop-blur-md border border-[var(--tron-border)] group-hover:border-[var(--tron-primary)] transition-all duration-500 group-hover:shadow-[var(--tron-glow-lg)]">
               <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[var(--tron-primary)] z-10" />
